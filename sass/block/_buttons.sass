@@ -1,13 +1,10 @@
 .button
-  display: inline-block
+  @include style-btn($color-grey, $color-white)
   padding: 1.5rem 2.1rem
-  background-color: $color-white
   border-radius: 5rem
   font-size: 2rem
   font-weight: 400
   letter-spacing: 0.25em
-  color: $color-grey
-  text-transform: uppercase
   transition: all .3s ease 0s
   position: relative
   &__header
