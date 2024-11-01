@@ -3,3 +3,9 @@
   color: $color
   text-transform: uppercase
   background-color: $color-bg
+
+@mixin clearfix
+  &::after
+    content: ''
+    display: table
+    clear: both

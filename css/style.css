@@ -37,7 +37,7 @@ a {
 }
 
 .container-fluid {
-  max-width: 1260px;
+  max-width: 126rem;
   margin: 0 auto;
   padding: 5rem 1rem 0;
   display: -webkit-box;
@@ -51,6 +51,58 @@ a {
           justify-content: space-between;
 }
 
+.container {
+  max-width: 116rem;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+[class^=col-] {
+  float: left;
+  background-color: #a84b9f;
+}
+[class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: #be8888;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.col-2-of-3 {
+  width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
+}
+
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.col-2-of-4 {
+  width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
+}
+
+.col-3-of-4 {
+  width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
+}
+
 .wrapper {
   background-color: #f7f7f7;
 }
@@ -58,8 +110,8 @@ a {
 .header {
   position: relative;
   height: 95vh;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(1, 1, 1, 0.7))), url("../img/header/header-bg.jpg") center/cover no-repeat;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(1, 1, 1, 0.7) 100%), url("../img/header/header-bg.jpg") center/cover no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/header/header-bg.jpg") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/header/header-bg.jpg") center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
@@ -75,6 +127,27 @@ a {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
+}
+.header__title_big {
+  display: block;
+  font-size: 5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  -webkit-animation: leftToRight 2s ease-in-out;
+          animation: leftToRight 2s ease-in-out;
+}
+.header__title_small {
+  display: block;
+  font-weight: 100;
+  font-size: 4rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 5rem;
+  -webkit-animation: rightToLeft 2s ease-in-out;
+          animation: rightToLeft 2s ease-in-out;
+}
+.header__title_white {
+  color: #fff;
 }
 
 .burger {
@@ -94,6 +167,10 @@ a {
 }
 .burger span:not(:last-child) {
   margin-bottom: 0.8rem;
+}
+
+.about {
+  padding-top: 8rem;
 }
 
 @-webkit-keyframes leftToRight {
@@ -243,25 +320,27 @@ a {
           animation: btnToUp 0.8s ease-out backwards;
 }
 
-.title__big {
-  display: block;
+.title {
+  font-size: 3.6rem;
   font-weight: 800;
-  font-size: 5rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 1rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  -webkit-animation: leftToRight 2s ease-in-out;
-          animation: leftToRight 2s ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(161, 79, 3, 0.7)));
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(161, 79, 3, 0.7) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
-.title__subtitle {
-  display: block;
-  font-weight: 100;
-  font-size: 4rem;
-  letter-spacing: 0.12em;
-  margin-bottom: 5rem;
-  -webkit-animation: rightToLeft 2s ease-in-out;
-          animation: rightToLeft 2s ease-in-out;
+.title:hover {
+  text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+      -ms-transform: skewY(2deg) skewX(15deg) scale(1.1);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
 }
-.title_white {
-  color: #fff;
+.title__about {
+  margin-bottom: 8rem;
 }

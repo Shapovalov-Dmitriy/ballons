@@ -26,9 +26,20 @@ a
   color: $color-grey
 
 .container-fluid
-  max-width: 1260px
+  max-width: 126rem
   margin: 0 auto
   padding: 5rem 1rem 0
   display: flex
   align-items: center
   justify-content: space-between
+
+.container
+  max-width: 116rem
+  margin: 0 auto
+  padding: 0 10px
+
+[class^="col-"]
+  float: left
+  background-color: #a84b9f
+  &:not(:last-child)
+    margin-right: $gutter-horizontal
