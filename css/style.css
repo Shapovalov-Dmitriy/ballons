@@ -138,6 +138,10 @@ a {
           transform: scale(0.9);
 }
 
+.mb-10 {
+  margin-bottom: 1rem;
+}
+
 .mb-30 {
   margin-bottom: 3rem;
 }
@@ -194,8 +198,7 @@ a {
 }
 
 .about {
-  padding-top: 8rem;
-  padding-bottom: 3rem;
+  padding: 8rem 0 20rem;
 }
 
 .paragraph {
@@ -203,6 +206,47 @@ a {
   line-height: 1.4;
   letter-spacing: 0.2rem;
   color: #777;
+}
+
+.adventure {
+  padding: 21rem 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/adventure/adventure-bg.jpg") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/adventure/adventure-bg.jpg") center/cover no-repeat;
+  -webkit-transform: skewY(7deg);
+      -ms-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+.adventure > * {
+  -webkit-transform: skewY(-7deg);
+      -ms-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  -webkit-box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.card:hover {
+  -webkit-transform: translateY(-2rem) scale(1.03);
+      -ms-transform: translateY(-2rem) scale(1.03);
+          transform: translateY(-2rem) scale(1.03);
+}
+.card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(161, 79, 3, 0.7)));
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(161, 79, 3, 0.7) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 @-webkit-keyframes leftToRight {
