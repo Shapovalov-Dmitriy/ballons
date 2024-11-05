@@ -1,4 +1,6 @@
 .title
+  position: relative
+  z-index: 5
   font-size: $font-size-h2
   font-weight: 800
   letter-spacing: 1rem
@@ -12,8 +14,10 @@
   &:hover
     text-shadow: $text-shadow
     transform: skewY(2deg) skewX(15deg) scale(1.1)
-  &__about
+  &__about, &__tour
     margin-bottom: 8rem
+  &_white
+    color: $color-white
 .title-h3
   font-weight: 700
   font-size: 2rem

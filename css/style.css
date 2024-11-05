@@ -36,6 +36,10 @@ a {
   color: #777;
 }
 
+ul {
+  list-style: none;
+}
+
 .container-fluid {
   max-width: 126rem;
   margin: 0 auto;
@@ -55,6 +59,13 @@ a {
   max-width: 116rem;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.visually-hidden {
+  position: fixed;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
 }
 
 [class^=col-] {
@@ -150,8 +161,8 @@ a {
   margin-bottom: 5rem;
 }
 
-.wrapper {
-  background-color: #f7f7f7;
+.mb-80 {
+  margin-bottom: 8rem;
 }
 
 .header {
@@ -222,31 +233,31 @@ a {
           transform: skewY(-7deg);
 }
 
-.card {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2.5rem;
-  border-radius: 0.5rem;
+.tour {
+  padding-top: 21rem;
+  padding-bottom: 8.5rem;
+}
+.tour__wrapper {
   text-align: center;
-  -webkit-box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.card:hover {
-  -webkit-transform: translateY(-2rem) scale(1.03);
-      -ms-transform: translateY(-2rem) scale(1.03);
-          transform: translateY(-2rem) scale(1.03);
+
+.feedBack {
+  padding: 8rem 0;
+  position: relative;
 }
-.card__icon {
-  display: inline-block;
-  font-size: 6rem;
-  margin-bottom: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(161, 79, 3, 0.7)));
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(161, 79, 3, 0.7) 100%);
-  -webkit-background-clip: text;
-  color: transparent;
+.feedBack__button {
+  text-align: center;
+}
+
+.to-book {
+  padding: 10rem 0;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(3.65%, #ba8554), to(#a14f03));
+  background-image: linear-gradient(90deg, #ba8554 3.65%, #a14f03 100%);
+}
+.to-book__wrapper {
+  width: 100%;
+  min-height: 500px;
+  background: url("../img/to-book/to-book-bg.jpg");
 }
 
 @-webkit-keyframes leftToRight {
@@ -438,6 +449,8 @@ a {
 }
 
 .title {
+  position: relative;
+  z-index: 5;
   font-size: 3.6rem;
   font-weight: 800;
   letter-spacing: 1rem;
@@ -458,8 +471,11 @@ a {
       -ms-transform: skewY(2deg) skewX(15deg) scale(1.1);
           transform: skewY(2deg) skewX(15deg) scale(1.1);
 }
-.title__about {
+.title__about, .title__tour {
   margin-bottom: 8rem;
+}
+.title_white {
+  color: #fff;
 }
 
 .title-h3 {
@@ -471,4 +487,235 @@ a {
 }
 .title-h3__about {
   margin-bottom: 1rem;
+}
+
+.adventure-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  -webkit-box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.adventure-card:hover {
+  -webkit-transform: translateY(-2rem) scale(1.03);
+      -ms-transform: translateY(-2rem) scale(1.03);
+          transform: translateY(-2rem) scale(1.03);
+}
+.adventure-card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(161, 79, 3, 0.7)));
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(161, 79, 3, 0.7) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.tour-card {
+  min-height: 50rem;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  padding: 0 5rem 55rem;
+}
+.tour-card__side {
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+}
+.tour-card__side_front {
+  background-color: #fff;
+}
+.tour-card__side_back {
+  background-image: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0%, rgba(161, 79, 3, 0.7) 100%);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.tour-card:hover .tour-card__side_front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.tour-card:hover .tour-card__side_back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+.tour-card__img {
+  background-blend-mode: hard-light;
+  height: 24.5rem;
+  border-radius: 0.3rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  margin-bottom: 4.5rem;
+}
+.tour-card__img_bg-1 {
+  background: #ba8554 url("../img/tour/card-1.jpg") center/cover no-repeat;
+}
+.tour-card__img_bg-2 {
+  background: #ba8554 url("../img/tour/card-2.jpg") center/cover no-repeat;
+}
+.tour-card__img_bg-3 {
+  background: #ba8554 url("../img/tour/card-3.jpg") center/cover no-repeat;
+}
+.tour-card__title {
+  font-weight: 300;
+  font-size: 2.8rem;
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 17.6rem;
+  right: 0;
+}
+.tour-card__span {
+  display: block;
+  padding: 1rem 2rem 0.3rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ba8554), to(#a14f03));
+  background-image: linear-gradient(90deg, #ba8554 0%, #a14f03 100%);
+}
+.tour-card__span_2 {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  padding-top: 0.3rem;
+  padding-bottom: 1rem;
+}
+.tour-card__descr {
+  text-align: center;
+}
+.tour-card__item {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.tour-card__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.tour-card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.tour-card__subtitle {
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  margin-bottom: 8.7rem;
+  text-transform: uppercase;
+}
+.tour-card__price {
+  font-weight: 500;
+  font-size: 6rem;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  margin-bottom: 8.7rem;
+}
+.tour-card__button {
+  -webkit-box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-feedBack {
+  width: 85%;
+  padding: 5rem 10rem 8rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  -webkit-transform: skewX(330deg);
+      -ms-transform: skewX(330deg);
+          transform: skewX(330deg);
+}
+.card-feedBack > * {
+  -webkit-transform: skewX(-330deg);
+      -ms-transform: skewX(-330deg);
+          transform: skewX(-330deg);
+}
+.card-feedBack__img {
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle(50%);
+  width: 16rem;
+  height: 16rem;
+  margin-right: 4rem;
+  position: relative;
+}
+.card-feedBack__img img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  height: 100%;
+  width: 100%;
+}
+.card-feedBack__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20%);
+      -ms-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  opacity: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card-feedBack:hover .card-feedBack__name {
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.card-feedBack:hover img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: blur(0.3rem) brightness(60%);
+          filter: blur(0.3rem) brightness(60%);
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(186, 133, 84, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
 }
