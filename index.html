@@ -256,7 +256,28 @@
     <section class="to-book">
       <div class="container">
         <div class="to-book__wrapper">
-
+          <h2 class="title mb-30 title__to-book">Забронировать тур</h2>
+          <div class="to-book__form">
+            <form class="form" action="">
+              <div class="form__group">
+                <input class="form__input" type="text" placeholder="Имя Фамилия" id="name" required>
+                <label class="form__label" for="name">Имя Фамилия</label>
+              </div>
+              <div class="form__group">
+                <input class="form__input" type="email" placeholder="Ivanov@mail.com" id="mail" required>
+                <label class="form__label" for="mail">Почтовый адрес</label>
+              </div>
+              <div class="form__radio mb-30">
+                <label for="tour-1">
+                  <input type="radio" name="tour" id="tour-1">Групповой тур
+                </label>
+                <label for="tour-2">
+                  <input type="radio" name="tour" id="tour-2">Индивидуальный тур
+                </label>
+              </div>
+              <button class="button button_brow button_animated" type="submit">Забронировать</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
