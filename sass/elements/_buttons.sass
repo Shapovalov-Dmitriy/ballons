@@ -41,10 +41,7 @@
 .btn-text
   position: relative
   display: inline-block
-  font-weight: 700
-  font-size: $font-size
-  letter-spacing: .2rem
-  color: $color-brown-light
+  @include font($color-brown-light, 1.6rem, $font-weight-700)
   padding: 1rem
   border-bottom: 1px solid $color-brown-light
   transition: all .3s

@@ -414,10 +414,10 @@ ul {
 .btn-text {
   position: relative;
   display: inline-block;
-  font-weight: 700;
   font-size: 1.6rem;
-  letter-spacing: 0.2rem;
   color: #ba8554;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
   padding: 1rem;
   border-bottom: 1px solid #ba8554;
   -webkit-transition: all 0.3s;
