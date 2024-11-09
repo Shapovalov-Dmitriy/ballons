@@ -40,21 +40,6 @@ ul {
   list-style: none;
 }
 
-.container-fluid {
-  max-width: 126rem;
-  margin: 0 auto;
-  padding: 5rem 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .container {
   max-width: 116rem;
   margin: 0 auto;
@@ -176,6 +161,9 @@ ul {
 .header__logo {
   width: 5.6rem;
   height: 7rem;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
 }
 .header__box {
   position: absolute;
@@ -923,4 +911,127 @@ ul {
 }
 .form__input-radio:checked + .form__input-label .form__button-radio::after {
   opacity: 1;
+}
+
+.navigation {
+  position: relative;
+}
+
+.burger {
+  position: fixed;
+  z-index: 55;
+  top: 5rem;
+  right: 5rem;
+  width: 7rem;
+  height: 7rem;
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border-color: transparent;
+  cursor: pointer;
+}
+.burger span {
+  position: relative;
+  top: -4px;
+}
+.burger span, .burger span::before, .burger span::after {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.burger span::before, .burger span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.burger span::before {
+  top: -10px;
+}
+.burger span::after {
+  top: 10px;
+}
+
+.burger-active span {
+  background-color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.burger-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.burger-active span::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 53;
+  -webkit-transition: all 0.5s easeInOutBack;
+  transition: all 0.5s easeInOutBack;
+}
+.menu::before {
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: radial-gradient(#a14f03, #ba8554);
+  position: fixed;
+  top: 5.5rem;
+  right: 5.5rem;
+  z-index: 50;
+}
+.menu__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 53;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.menu__list li {
+  text-align: center;
+}
+.menu__list li:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.menu__list a:link, .menu__list a:visited {
+  display: inline-block;
+  font-size: 4rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-repeat: no-repeat;
+  background-size: 225%;
+  padding: 1rem 2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.menu__list a:link:hover, .menu__list a:link:active, .menu__list a:visited:hover, .menu__list a:visited:active {
+  -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+          transform: translateX(1rem);
+  background-position: 100%;
+  color: #a14f03;
+}
+
+.menu-active::before {
+  -webkit-transform: scale(350);
+      -ms-transform: scale(350);
+          transform: scale(350);
 }
