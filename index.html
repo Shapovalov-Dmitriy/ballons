@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -12,13 +12,14 @@
 </head>
 
 <body>
-
   <div class="navigation">
-    <button class="burger">
-      <span></span>
-    </button>
-    <nav class="menu">
-      <ul class="menu__list">
+    <input class="navigation__toggle" type="checkbox" id="nav-toggle">
+    <label class="navigation__button" for="nav-toggle">
+      <span class="navigation__icon"></span>
+    </label>
+    <div class="navigation__background"></div>
+    <nav class="navigation__menu">
+      <ul class="navigation__list">
         <li>
           <a href="#">О НАС</a>
         </li>
@@ -36,15 +37,15 @@
         </li>
       </ul>
     </nav>
-
   </div>
+
+
   <header class="header">
-    <!-- <div class="container-fluid"> -->
+
     <a class="header__logo" href="#">
       <img src="icons/Icon-logo.svg" alt="Логотип сайта воздушные">
     </a>
 
-    <!-- </div> -->
     <div class="header__box">
       <h1 class="header__title header__title_white">
         <span class="header__title_big">Туры на воздушном шаре</span>
@@ -334,7 +335,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
 </body>
 
 </html>
