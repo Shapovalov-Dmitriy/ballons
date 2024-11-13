@@ -7,10 +7,10 @@
 
 html
   font-size: 62.5%
-  @media screen and (max-width:1024px)
+  @include respond(screen)
     font-size: 50%
-  @media screen and (max-width:768px)
-    font-size: 43.75%
+  // @include respond(tablet)
+  // font-size: 43.75%
 
 body
   font-family: "Roboto",sans-serif
@@ -36,8 +36,3 @@ ul
 .visually-hidden
   position: fixed
   transform: scale(0)
-
-[class^="col-"]
-  float: left
-  &:not(:last-child)
-    margin-right: $gutter-horizontal

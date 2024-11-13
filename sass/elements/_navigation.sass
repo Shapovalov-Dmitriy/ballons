@@ -16,13 +16,13 @@
     cursor: pointer
   &__icon
     position: relative
-    top: 20px
+    top: 2rem
     &,
     &::before,
     &::after
       display: inline-block
-      width: 30px
-      height: 2px
+      width: 3rem
+      height: .2rem
       background-color: $color-dark
       transition: all .3s
     &::before,
@@ -32,13 +32,13 @@
       left: 0
       transition: all .3s
     &::before
-      top: -8px
+      top: -0.8rem
     &::after
-      top: 8px
+      top: .8rem
   &__button:hover &__icon::before
-    top: -10px
+    top: -1rem
   &__button:hover &__icon::after
-    top: 10px
+    top: 1rem
   &__background
     width: 6rem
     height: 6rem
