@@ -11,24 +11,22 @@
     transition: all .3s
     @include respond(tablet)
       width: 50%
+    @include respond(phone)
+      position: static
+      display: block
+      width: 80%
+      margin: 0 auto 2rem
     &:hover
       transform: scale(1.1)
       z-index: 10
     &_n1
       top: 0
       left: 1rem
-      // @include respond(tablet)
-      //   left: 7rem
     &_n2
       top: 9rem
       right: 0
-      // @include respond(tablet)
-      //   right: 17rem
     &_n3
       top: 16.5rem
       left: 3rem
-      // @include respond(tablet)
-      //   top: 16rem
-      //   left: 32rem
   &:hover &__photo:not(:hover)
     transform: scale(.90)

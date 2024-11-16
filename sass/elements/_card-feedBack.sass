@@ -8,12 +8,15 @@
   transform: skewX(330deg)
   @include respond(tablet)
     transform: skewX(350deg)
-
+  @include respond(phone)
+    transform: skewX(0deg)
+    padding: 3rem
   & > *
     transform: skewX(-330deg)
     @include respond(tablet)
       transform: skewX(-350deg)
-
+    @include respond(phone)
+      transform: skewX(0deg)
   &__img
     overflow: hidden
     border-radius: 50%
@@ -23,6 +26,10 @@
     height: 16rem
     margin-right: 4rem
     position: relative
+    @include respond(phone)
+      float: none
+      margin: 0 auto 2rem
+
     img
       transition: all .3s
       transform: scale(1.2)

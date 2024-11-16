@@ -44,6 +44,10 @@
     @include font($color-grey, 1.6rem, $font-weight-400)
     &:not(:last-child)
       margin-right: 1rem
+    @include respond(tablet)
+      display: block
+      &:not(:last-child)
+        margin-bottom: 2rem
 
   &__button-radio
     display: inline-block
