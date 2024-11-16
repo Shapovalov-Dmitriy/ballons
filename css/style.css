@@ -352,6 +352,11 @@ ul {
     background: linear-gradient(110deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.8) 504%, rgba(255, 255, 255, 0) 54%, rgba(255, 255, 255, 0) 100%);
   }
 }
+@media (max-width: 600px) {
+  .to-book__wrapper {
+    padding: 3rem;
+  }
+}
 
 .footer {
   background-color: #333;
