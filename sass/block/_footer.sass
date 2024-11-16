@@ -14,7 +14,11 @@
       display: inline-block
       &:not(:last-child)
         margin-right: 5rem
-
+      @include respond(tablet)
+        display: block
+        &:not(:last-child)
+          margin-right: 0
+          margin-bottom: 2rem
     a
       display: inline-block
       transition: all .3s

@@ -5,31 +5,50 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
   &__logo
     width: 5.6rem
-    height: 7rem
     position: absolute
     top: 5rem
     left: 5rem
+    @include respond(tablet)
+    width: 4.6rem
+    top: 3rem
+    left: 3rem
+    img
+      max-width: 100%
+      height: auto
   &__box
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
     text-align: center
-    max-width: 100%
+    width: 80%
+    @include respond(tablet)
+      top: 40%
   &__title
     &_big
       display: block
       font-size: 5rem
-      letter-spacing: 0.2em
+      letter-spacing: 1rem
       text-transform: uppercase
       margin-bottom: 1rem
       animation: leftToRight 2s ease-in-out
+      @include respond(screen)
+        font-size: 4rem
+        letter-spacing: .5rem
+      @include respond(tablet)
+        font-size: 3rem
+
     &_small
       display: block
       font-weight: 100
       font-size: 4rem
-      letter-spacing: 0.12em
+      letter-spacing: 0.5rem
       margin-bottom: 5rem
       animation: rightToLeft 2s ease-in-out
+      @include respond(screen)
+        font-size: 3rem
+        letter-spacing: .3rem
+      @include respond(tablet)
+        font-size: 2.5rem
     &_white
       color: #fff

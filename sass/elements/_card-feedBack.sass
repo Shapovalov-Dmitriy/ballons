@@ -6,8 +6,13 @@
   box-shadow: $box-shadow
   margin: 0 auto
   transform: skewX(330deg)
+  @include respond(tablet)
+    transform: skewX(350deg)
+
   & > *
     transform: skewX(-330deg)
+    @include respond(tablet)
+      transform: skewX(-350deg)
 
   &__img
     overflow: hidden

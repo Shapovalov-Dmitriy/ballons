@@ -1,5 +1,7 @@
 .composition
   position: relative
+  @include respond(tablet)
+    top: 2rem
   &__photo
     width: 63%
     border-radius: .5rem
@@ -7,17 +9,26 @@
     position: absolute
     z-index: 1
     transition: all .3s
+    @include respond(tablet)
+      width: 50%
     &:hover
       transform: scale(1.1)
       z-index: 10
     &_n1
       top: 0
       left: 1rem
+      // @include respond(tablet)
+      //   left: 7rem
     &_n2
       top: 9rem
       right: 0
+      // @include respond(tablet)
+      //   right: 17rem
     &_n3
       top: 16.5rem
       left: 3rem
+      // @include respond(tablet)
+      //   top: 16rem
+      //   left: 32rem
   &:hover &__photo:not(:hover)
     transform: scale(.90)

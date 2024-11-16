@@ -1,8 +1,11 @@
 .about
-  padding: 8rem 0 20rem
+  padding-top: 8rem
+  margin-bottom: 20rem
   @include respond(screen)
-  padding: 5rem 0 15rem
-
+    padding-top: 5rem
+    margin-bottom: 15rem
+  @include respond(tablet)
+    margin-bottom: 60rem
 .paragraph
   font-size: $font-size
   line-height: 1.4
