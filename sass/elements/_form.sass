@@ -18,6 +18,8 @@
     border-bottom: .2rem solid transparent
     box-shadow: $box-shadow
     margin-bottom: 1.1rem
+    @media (max-width: 700px)
+      max-width: 100%
     &::placeholder
       @include font($color-grey, 1.6rem, $font-weight-400)
       opacity: 0.5
@@ -48,7 +50,8 @@
       display: block
       &:not(:last-child)
         margin-bottom: 2rem
-
+    @media (max-width: 700px)
+      display: inline-block
   &__button-radio
     display: inline-block
     width: 3rem
